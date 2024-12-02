@@ -1,0 +1,61 @@
+<br>
+  <head>
+    <title>Employee Registration Form</title>
+    <script>
+      function validation()
+      {
+        var regName=/^[A-Za-z]+$/;
+        var dob=/^(0?[1-9]|[12][0-9]|3[01])[\|\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+
+        var djdate=/^(0?[1-9]|[12][0-9]|3[01])[\|\-](0?[1-9]|1[012])[\|\-]\d{4}$/;
+
+        var sal=/^\d{1,6}(?:\.\d{0,2})?$/;
+
+        var name=document.getElementById("name").value;
+        var dob=document.getElementById("dob").value;
+        var jdate=document.getElementById("jdate").value;
+        var sal=document.getElementById("sal").value;
+
+        if(!regName.test(name))
+      {
+        alert("Invalid name...!plz reenter");
+      }
+      else if(!dob.test(dob))
+      {
+        alert("Invalid dob..! plz Reenter");
+      }
+      else if(!djdate.test(jdate))
+      {
+        alert("Invalid joining date...! plz Reenter");
+      }
+      else if(!sal.test(sal))
+      {
+        alert("Invalid salary...! plz Reenter");
+      }
+      else{
+        alert("valid details...click to proceed");
+      }
+      db=dob.split(/[/-]/);
+      dj=jdate.split("/ ");
+      if(db<dj)
+      
+        document.write("valid...!!");
+        else{
+          alert("invalid...!");
+        }
+      
+      }
+
+    </script>
+  </head>
+  <br>
+    <br>
+      <h2>Registration Details</h2>
+      Name:<input type="text" id="name" placeholder="Enter Your Name"></br><br>
+      Dob:<input type="text" id="date" placeholder="Enter Your date of birth"></br><br>
+      Jdate:<input type="text" id="jdate" placeholder="Enter Your joining date"></br><br>
+      salary:<input type="text" id="sal" placeholder="Enter your salary"></br><br>
+      <button type="submit" onclick="validate()">submit</button>
+    </form>
+  </body>
+</html>

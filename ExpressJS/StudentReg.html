@@ -1,0 +1,72 @@
+<html>
+  <title>Student Registration Form</title>
+  <head>
+    <script>
+      function formvalidate()
+      {
+        var fname=document.getElementById("fn").value;
+        var lname=document.getElementById("ln").value;
+        var email=document.getElementById("email").value;
+        var dob=document.getElementById("dob").value;
+        var add=document.getElementById("add").value;
+        var mob=document.getElementById("mob").value;
+        var per=document.getElementById("per").value;
+        pat=/^[A-Za-z]+$/;
+
+        emailpat=/^[a-z]+[a-z0-9-_#&]*@[a-z]+(\.[a-z]{3})|(\[a-z]{2}\.[a-z]{2}))$/;
+
+        dobpat=/^([0][1-9]\[12][0-9]|[3][01])[\-\/]([0][1-9]\[1][012])[\-\/][0-9]{4}$/;
+
+        mobpat=/^[0-9]{10}$/;
+        perpat=/^[0-9]{2}.[0-9]{2}$/;
+        if(!pat.test(fname))
+      {
+        alert("Invalid name...!plz Reenter");
+      }
+      else if(!pat.test(lname))
+      {
+        alert("Invalid lname..!plz reEnter");
+      }
+      else if(!pat.test(email))
+      {
+        alert("Invalid email...! plz Reenter");
+      }
+      else if(!pat.test(dob))
+      {
+        alert("Invalid dob...!plz reEnter");
+      }
+      else if(!pat.test(add))
+      {
+        alert("Invalid add...!plz ReEnter");
+      }
+      else if(!pat.test(mob))
+      {
+        alert("Invalid mob...!plz Reenter");
+      }
+      else if(!pat.test(per))
+      {
+        alert("Invalid per...!plz Reenter");
+      }
+      else{
+        alert("Data is valid");
+      }
+
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Student Registration Form</h2>
+    <form>
+      <button class="container">
+        First Name:<input type="text" placeholder="Enter your name" id="fn"><br><br>
+        Last Name:<input type="text" placeholder="Enter your last name" id="ln"><br><br>
+        Email:<input type="text" placeholder="Enter your email" id="email"><br><br>
+        Dob:<input type="text" placeholder="Enter your dob" id="date"><br><br>
+        Address:<input type="text" placeholder="Enter address" id="add"><br><br>
+        Mobile:<input type="text" placeholder="Enter mobile no" id="mob"><br><br>
+        Percentage:<input type="text" placeholder="Enter percentage" id="per"><br><br>
+        <input type="button" class="registerbutton" value="register" onclick="formvalidate()"></button>"
+      </div>
+    </form>
+  </body>
+</html>

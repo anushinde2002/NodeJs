@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Registration Form</title>
+  </head>
+  <script>
+    function validate()
+    {
+      let fn=document.getElemeneById("fname").value;
+      let ln=document.getElementById("lname").value;
+      let age=parseInt(document.getElementById("age").value);
+      let pat=/^[A-Za-z]+$/;
+      if(fn==""&&ln==""&&age=="")
+    {
+      alert("empty text box");
+    }
+    else if(pat.test(fn) && pat.test(ln) && age>=18 && age<=50)
+    {
+      alert("Data is valid");
+    }
+    else{
+      alert("data is no valid");
+    }
+    }
+  </script>
+  <body>
+    <form>
+      <h2>Student Registration Form</h2>
+      Enter First Name:<input type="text" id="fname"><br>
+      Enter last Name:<input type="text" id="lname"><br>
+      Enter age:<input type="text" id="age"><br>
+      <input type="button" id="submit" onclick="validate()"/>
+
+    </form>
+  </body>
+</html>

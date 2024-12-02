@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script>
+      function validate()
+      {
+        let email=document.getElementById("email").value;
+        var pat=/^[a-z]+[a-z0-9_#&]@[a-z]((\/[a-z]{3})|(\.[a-z]{2}\/[a-z]{2}))$/;
+        if(pat.test(email))
+      {
+        alert("valid email")
+
+      }
+      else{
+        alert("Invalid email");
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <form>
+    <h2>Email Validation</h2>
+    Enter Email:<input type="text" id="email"/><br>
+    <input type="button" value="validate" onclick="validate()"/>
+  </form>
+  </body>
+</html>
